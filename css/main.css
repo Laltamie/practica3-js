@@ -1,28 +1,34 @@
 body {
+  background-image: url(../multimedia/img/fondo2.jpg) !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #faf5f5;
   padding: 0%;
   margin: 0%;
   box-sizing: border-box; }
 
-.header-home p{
-  text-align: center;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 20px;
-  font-weight: bold;
-}
+.header-home {
+  text-align: center; }
+  .header-home p {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold; }
 
-.container-heels{
+.container-heels {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
   margin: 10px;
-  border: 10px;
-}
-.container-clothing{
+  border: 10px; }
+
+.container-clothing {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
   margin: 10px;
-  border: 10px;
-}
+  border: 10px; }
