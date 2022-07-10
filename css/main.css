@@ -1,0 +1,28 @@
+body {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box; }
+
+.header-home p{
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.container-heels{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+  border: 10px;
+}
+.container-clothing{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+  border: 10px;
+}
