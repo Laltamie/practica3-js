@@ -6,8 +6,6 @@ const arrayCategoria = [];
 let contadorProd = 0;
 let contadorCat = 0;
 
-
-
 // FUNCIONES
 function seleccionarProducto() {
     const productos = [];
@@ -76,10 +74,7 @@ const categoriaAdd = (nombre) => {
 }
 
 
-let productoSeleccionado = productoAdd.filter(elemento => elemento.precio < 30000);
-
-let categoriaSeleccionada = categoriaAdd.find(elemento => elemento.nombre = "calzado");
-
-let productosSelec = productoAdd.map(function(precio){
-    return Math.min(precio);
-});
+let producto = document.getElementById("product-sara");
+console.log(producto);
+console.log(producto.innerHTML);
+console.log(producto.innerText);
