@@ -19,22 +19,18 @@ function seleccionarProducto() {
   }
 
   function calcularTotal(){
-    let opcionSeleccionada = seleccionarProducto();
-
-    const PRECIO1 = 3500;
-    const PRECIO2 = 2000;
-    
+    let opcionSeleccionada = seleccionarProducto();    
 
         if(!isNaN(opcionSeleccionada !== "")){
             let cantidadProducto = prompt('Ingrese la cantidad de producto que desea adquirir: ')
             alert('Opcion seleccionada: ' + opcionSeleccionada + ' Cantidad: ' + cantidadProducto);
             switch(opcionSeleccionada){
                 case 'producto1':
-                    total = PRECIO1 * cantidadProducto;
+                    total = Producto.precio * cantidadProducto;
                     console.log(total);
                     break;
                 case 'producto2':
-                    total = PRECIO2 * cantidadProducto;
+                    total = Producto.precio * cantidadProducto;
                     console.log(total);
                     break;
                 default:
@@ -45,21 +41,6 @@ function seleccionarProducto() {
             alert('Seleccione una opción válida')
         }
         alert('Total: ' + total)
-    }
-
-
-    function registroClientes() {
-        let cliente = [] ;
-        for (let i = 0; i < 100 ; i++) {
-            let nombre = prompt ("Ingrese su nombre");
-            let apellido = prompt ("Ingrese su apellido");
-            let edad = parseInt (prompt("Ingrese edad"));
-            let email = prompt("Ingrese su email");
-    
-            let clientes = (new Clientes (nombre, apellido, edad, email));
-            cliente.push(clientes);
-        }
-        return cliente;
     }
 
 // OBJETOS 
@@ -82,17 +63,6 @@ class Categoria {
     
 }
 
-class Clientes { 
-    constructor (id, nombre, apellido, edad, email ) {
-        this.id = id,
-        this.nombre = nombre,
-        this.apellido = apellido,
-        this.edad = edad,
-        this.email = email
-        return this;
-    }
-    
-}
 
 // ARRAYS
 const productoAdd = (nombre, precio) => {
@@ -103,11 +73,6 @@ const productoAdd = (nombre, precio) => {
 const categoriaAdd = (nombre) => {
     const addCategoria = new Categoria(parseInt (++contadorProd),nombre)
     arrayCategoria.push (addCategoria);
-}
-
-const cleinteAdd = (nombre) => {
-    const addCliente = new Clientes(parseInt (++contadorProd),nombre, apellido, edad, email)
-    addCliente.push (addCliente);
 }
 
 
