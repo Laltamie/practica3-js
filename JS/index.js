@@ -7,15 +7,6 @@ let contadorProd = 0;
 let contadorCat = 0;
 
 // FUNCIONES
-function seleccionarProducto() {
-    const productos = [];
-    productos.push({nombre: 'producto1', precio: 3000});
-    productos.push({nombre: 'producto2', precio: 5500});
-    productos.forEach(x=> alert(x.nombre + '' + x.precio))
-    const productoFromUser = prompt('Ingrese el nombre del producto a adquirir: ').toLowerCase();
-    return(productoFromUser);
-  }
-
   function calcularTotal(){
     let opcionSeleccionada = seleccionarProducto();    
 
@@ -52,15 +43,6 @@ class Producto {
     
 }
 
-class Categoria { 
-    constructor (id, nombre) {
-        this.id = id,
-        this.nombre = nombre
-        return this;
-    }
-    
-}
-
 
 // ARRAYS
 const productoAdd = (nombre, precio) => {
@@ -68,16 +50,29 @@ const productoAdd = (nombre, precio) => {
     arrayProducto.push (addProdcuto);
 }
 
-const categoriaAdd = (nombre) => {
-    const addCategoria = new Categoria(parseInt (++contadorProd),nombre)
-    arrayCategoria.push (addCategoria);
-}
-
-
-let producto = document.getElementById("product-sara");
-console.log(producto);
-console.log(producto.innerHTML);
-console.log(producto.innerText);
 
 
 
+
+let productos = [
+      {id: 1, nombre: "sara", precio: 6500, img: "../multimedia/img/heels3.jpg"},
+      {id: 2, nombre: "sofia", precio: 7000, img: "../multimedia/img/heels3.jpg"},
+      {id: 3, nombre: "selena", precio: 7000, img: "../multimedia/img/heels3.jpg"},
+      {id: 4, nombre: "siena", precio: 8000, img: "../multimedia/img/heels3.jpg"},
+      {id: 5, nombre: "mirna", precio: 12500, img: "../multimedia/img/heels3.jpg"},
+      {id: 5, nombre: "miel", precio: 25000, img: "../multimedia/img/heels3.jpg"},
+      {id: 5, nombre: "muna", precio: 35000, img: "../multimedia/img/heels3.jpg"},
+      {id: 5, nombre: "marie", precio: 22000, img: "../multimedia/img/heels3.jpg"}
+    ];
+    
+    let mainProducts = document.getElementById("mainProducts");
+    
+    for(const producto of productos){
+      let item = document.createElement("div");
+      item.innerHTML = `<h2>Id: ${producto.id}</h2>
+                        <p>Producto: ${producto.nombre}</p>
+                        <b>Precio: ${producto.precio}</b>
+                        <img src=${producto.img}>`;
+    
+      mainProducts.append(item);
+    }
