@@ -78,3 +78,6 @@ let producto = document.getElementById("product-sara");
 console.log(producto);
 console.log(producto.innerHTML);
 console.log(producto.innerText);
+
+
+
