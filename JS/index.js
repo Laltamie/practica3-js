@@ -53,7 +53,7 @@ const productoAdd = (nombre, precio) => {
 
 
 
-
+// CARGANDO PRODUCTOS A TRAVES DEL DOM
 let productos = [
       {id: 1, nombre: "sara", precio: 6500, img: "../multimedia/img/heels3.jpg"},
       {id: 2, nombre: "sofia", precio: 7000, img: "../multimedia/img/heels3.jpg"},
@@ -77,25 +77,33 @@ let productos = [
       mainProducts.append(item);
     }
 
-// FILTRAR PRODUCTOS
-// let productos = [
-//     {id: 1, nombre: "camisa", precio: 1001},
-//     {id: 2, nombre: "zapato", precio: 1020},
-//     {id: 3, nombre: "media", precio: 1500},
-//     {id: 4, nombre: "gorra", precio: 2000},
-//     {id: 5, nombre: "pantalon", precio: 2500}
-//   ];
-  
-//   let container = document.getElementById("container");
-//   let filtro = parseInt(prompt("ingrese el precio mínimo"));
-  
-//   let filtrados = productos.filter(elemento => elemento.precio > filtro);
-  
-//   for(const producto of filtrados){
-//     let item = document.createElement("div");
-//     item.innerHTML = `<h2 id="pepito">Id: ${producto.id}</h2>
-//                       <p>Producto: ${producto.nombre}</p>
-//                       <b>Precio: ${producto.precio}</b>
-  
-//     container.append(item);
-//   }
+    //FILTRANDO PRODUCTOS CON EL DOM
+    let filtro = parseInt(prompt("Ingrese el precio minimo"));
+
+    let productosFiltrados = productos.filter(elemento => elemento.precio > filtro);
+
+    for(const producto of productosFiltrados){
+        let item = document.createElement("ul");
+        item.innerHTML = `<h2>Id: ${producto.id}</h2>
+                          <p>Producto: ${producto.nombre}</p>
+                          <b>Precio: ${producto.precio}</b>
+                          <img src=${producto.img}>`;
+
+        mainProducts.append(item);
+    }
+
+    //interactuando con ENTER
+    formulario.addEventListener("submit", validacion);
+
+    function validacion (e){
+        e.preventDefault();
+    }
+
+    formulario.addEventListener("keydown", (e) => {
+        if(e.key === "Enter"){
+            alert("Formulario Enviado");
+        }
+    })
+
+
+    

@@ -58,3 +58,22 @@ body {
   text-align: center; }
   #mainProducts img {
     max-width: 200px; }
+
+body {
+  background-image: url(../multimedia/img/fondo2.jpg) !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #faf5f5;
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box; }
+
+.header-contact {
+  text-align: center; }
+  .header-contact p {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold; }
